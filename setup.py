@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='aircraft-radar',
     version='1.0',
-    description='A simple tkinter GUI which displays a radar of aircraft in a specified region using data pulled from the OpenSky Network API.',
+    description='A tkinter GUI which displays a radar of aircraft in a specified region using data pulled from the OpenSky Network API.',
     url='https://github.com/jmitchell-99/aircraft-radar',
     author='jmitchell-99',
     author_email='joemitchell091@gmail.com',
