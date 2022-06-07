@@ -6,7 +6,7 @@ A tkinter GUI which displays a radar of aircraft in a specified region using dat
 ## Installation
 TBC
 ## Using the GUI
-Once the package is installed you can run (file) and you should be able to see what is shown in the image below.
+Once the package is installed you can run [main.py](main.py) and you should be able to see what is shown in the image below.
 
 ![Image1](./example_images/image1.png)
 
