@@ -265,11 +265,9 @@ class AircraftRadar:
         try:
             if len(response['states'][0]) == 18:
                 df = pd.DataFrame(response['states'], columns=col_labels18)
-                print("17 columns")
 
             elif len(response['states'][0]) == 17:
                 df = pd.DataFrame(response['states'], columns=col_labels17)
-                print("18 columns")
 
         except:
             print("No data received from OpenSky API.")
