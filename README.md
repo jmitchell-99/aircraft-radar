@@ -6,7 +6,8 @@ A tkinter GUI which displays a radar of aircraft in a specified region using dat
 ## Installation
 1) Create a virtual environment.
 2) Download the aircraft-radar package.
-3) 
+3) _pip install -r requirements.txt_
+4) run _main.py_
 ## Using the GUI
 Once the package is installed you can run [main.py](main.py) and you should be able to see what is shown in the image below.
 
