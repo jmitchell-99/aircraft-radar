@@ -35,7 +35,7 @@ class AircraftRadar:
         self.m = self.ax.scatter([], [])
         
         # Load image for plotting
-        self.airplane_icon = plt.imread('C:\\Users\\Josep\\Documents\\Python\\Projects\\aircraft-radar-package\\aircraft-radar\\aircraft_red.png')
+        self.airplane_icon = plt.imread('aircraft_red.png')
         self.airplane_icon = (self.airplane_icon*255).astype(np.uint8) # this fixes 'Clipping input data...' lines from being printed
 
         # Cursor
@@ -183,7 +183,7 @@ class AircraftRadar:
         self.root.mainloop()
 
     def entry1_button(self):
-        """Min. longitude"""
+        """Min. longitude button."""
         
         # Changes entry button's appearance upon a mouse click. It then reverts back to original
         # appearance upon another click and switches between the two appearances upon following clicks.
@@ -196,7 +196,7 @@ class AircraftRadar:
             self.button_left_frame_2b.configure(bg = 'light grey', text='x')
 
     def entry2_button(self):
-        """Max. longitude"""
+        """Max. longitude button."""
         self.buttoncounter2 +=1
 
         if self.buttoncounter2 % 2 == 0:
@@ -206,7 +206,7 @@ class AircraftRadar:
             self.button_left_frame_2d.configure(bg = 'light grey', text='x')
 
     def entry3_button(self):
-        """Min. latitude"""
+        """Min. latitude button."""
         self.buttoncounter3 +=1
 
         if self.buttoncounter3 % 2 == 0:
@@ -216,7 +216,7 @@ class AircraftRadar:
             self.button_left_frame_2f.configure(bg = 'light grey', text='x')
 
     def entry4_button(self):
-        """Max. latitude"""
+        """Max. latitude button."""
         self.buttoncounter4 +=1
         
         if self.buttoncounter4 % 2 == 0:
@@ -226,7 +226,7 @@ class AircraftRadar:
             self.button_left_frame_2h.configure(bg = 'light grey', text='x')
 
     def update_map(self):
-        """Update map coordinates button"""
+        """Update map coordinates button."""
 
         # When all 4 buttons are selected, store the 4 user entries
         if self.buttoncounter1 % 2 != 0 and self.buttoncounter2 % 2 != 0 and self.buttoncounter3 % 2 != 0 and self.buttoncounter4 % 2 != 0:
@@ -250,7 +250,7 @@ class AircraftRadar:
                 instance.refresh_radar()
 
     def refresh_radar(self):
-        """Update matplotlib figure with refresh radar button"""
+        """Update matplotlib figure with refresh radar button."""
 
         # Data frame column labels (the OpenSky API will return either 17 or 18 columns of data)
         col_labels17 = ['icao24', 'callsign', 'origin_country', 'time_position', 'last_contact', 'longitude', 'latitude', 'baro_altitude', 'on_ground', 'velocity', 'true_track', 'vertical_rate', 'sensors', 'geo_altitude', 'squawk', 'spi', 'position_source']
@@ -298,7 +298,7 @@ class AircraftRadar:
             self.ax.artists[0].remove()
 
         # Plot icons over invisible points
-        x, y, t = np.atleast_1d(self.xdata, self.ydata, self.tdata)     # Ensures data is 1-dimensional array
+        x, y, t = np.atleast_1d(self.xdata, self.ydata, self.tdata)
 
         for x0, y0, t0 in zip(x, y, t):
             icon_rotated = ndimage.rotate(self.airplane_icon, (t0*-1), reshape=False)   # Rotates image dependent on track
@@ -315,7 +315,7 @@ class AircraftRadar:
         self.root.update()
 
     def mouse_click(self, event):
-        """Update text box upon mouse click event"""
+        """Update text box upon mouse click event."""
 
         # Get x,y locations of mouse click
         xclick = event.xdata
