@@ -1,5 +1,5 @@
 # Aircraft Radar
-A tkinter GUI which displays a radar of aircraft in a specified region using data pulled from the [OpenSky Network  API](https://openskynetwork.github.io/opensky-api/?ref=devresourc.es?ref=devresourc.es?ref=devresourc.es). It offers user interaction such as customisable map coordinates and the ability to show information about a specific aircraft on the radar selected by the user.
+A GUI which displays a radar of aircraft in a specified region using data pulled from the [OpenSky Network  API](https://openskynetwork.github.io/opensky-api/?ref=devresourc.es?ref=devresourc.es?ref=devresourc.es). It offers user interaction such as customisable map coordinates and the ability to show information about a specific aircraft on the radar selected by the user.
 ## Requirements
 - Python 3.8.5 or higher.
 - Libraries: [requirements.txt](requirements.txt).
